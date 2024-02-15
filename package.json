@@ -1,0 +1,13 @@
+{
+  "name": "cypress-ts",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@applitools/eyes-cypress": "^3.41.0",
+    "cypress": "^13.6.4",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  }
+}
