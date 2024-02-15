@@ -1,5 +1,9 @@
 # Applitools-Cypress tests in TypeScript
 
+## Setup
+
+    npm install
+
 ## Running the tests
 
     npm run cypress:run
