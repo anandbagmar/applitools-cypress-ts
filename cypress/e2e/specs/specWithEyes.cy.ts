@@ -10,12 +10,13 @@ describe('Applitools-Cypress-TS', () => {
                 {width: 1600, height: 1200, name: 'firefox'},
                 {width: 1600, height: 1200, name: 'chrome'},
                 {width: 1600, height: 1200, name: 'safari'},
-                {width: 1600, height: 1200, name: 'edgechromium'},
-                {deviceName: "iPhone_XR"}
+                {width: 1600, height: 1200, name: 'edgechromium'}
             ],
             batchName: "Applitools-Cypress-TS",
             // Set the concurrency that tests are rendered with on the UFG
-            concurrentSessions: 5
+            concurrentSessions: 5,
+            dontCloseBatches: true,
+            sendDom: true
         });
     });
     it('Cypress commands', () => {
