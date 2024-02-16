@@ -4,22 +4,10 @@ describe('Applitools-Cypress-TS', () => {
     beforeEach(() => {
         // Start Applitools Visual AI Test
         cy.eyesOpen({
-            appName: 'TODO-TS',
-            testName: Cypress.currentTest.title,
-            browser: [
-                {width: 1600, height: 1200, name: 'firefox'},
-                {width: 1600, height: 1200, name: 'chrome'},
-                {width: 1600, height: 1200, name: 'safari'},
-                {width: 1600, height: 1200, name: 'edgechromium'}
-            ],
-            batchName: "Applitools-Cypress-TS",
-            // Set the concurrency that tests are rendered with on the UFG
-            concurrentSessions: 5,
-            dontCloseBatches: true,
-            sendDom: true
+            testName: Cypress.currentTest.title
         });
     });
-    it('Cypress commands', () => {
+    it('Cypress commands with eyes', () => {
         // from your cypress/e2e/spec.cy.ts
         cy.visit('https://example.cypress.io/commands/actions');
         cy.eyesCheckWindow({
