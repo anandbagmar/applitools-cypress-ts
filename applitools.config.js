@@ -7,8 +7,13 @@ module.exports = {
     // Uncomment the below line and paste in your API key as an alternative to using an environment variable
     // apiKey: '',
 
-    batchName: "Applitools-Cypress-TS",
-    batch: { properties: [ {name: "Cypress", value: "12.0.1"} ] },
+
+    batch: {
+        name: "Applitools-Cypress-TS",
+        properties: [
+            { name: "Cypress", value: "12.0.1" }
+        ]
+    },
 
     // Select the browsers and devices to run your tests on via the Ultrafast Grid
     browser: [
