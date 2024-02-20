@@ -4,7 +4,10 @@ describe('Applitools-Cypress-TS', () => {
     beforeEach(() => {
         // Start Applitools Visual AI Test
         cy.eyesOpen({
-            testName: Cypress.currentTest.title
+            testName: Cypress.currentTest.title,
+            properties: [
+                {name: "Cypress", value: "13.6.4"}
+            ]
         });
     });
     it('Cypress commands with eyes', () => {
