@@ -23,6 +23,6 @@ jobs:
           node -v
           npm install
           npm list
-      - name: Get Latest Commit ID and save in GITHUB_ENV
+      - name: Run Cypress tests
         run: |
-          npx cypress run
+          APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }} npx cypress run
