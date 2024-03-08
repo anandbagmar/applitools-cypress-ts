@@ -17,6 +17,16 @@ stages:
 cypress_tests:
   stage: test
   script:
+    - rm -rf results
     - npm install
     - npm list
     - npx cypress run
+    - ls -l
+    - ls -l results
+    - ls -l results/cypress
+    - ls -l results/cypress/specs
+    - npm run combine:json
+    - npm run reports
+  artifacts:
+    paths:
+      - results

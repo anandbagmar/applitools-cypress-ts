@@ -2,13 +2,18 @@
   "name": "cypress-ts",
   "version": "1.0.0",
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.41.0",
+    "@applitools/eyes-cypress": "^3.42.0",
     "@cypress/grep": "^3.1.3",
     "cypress-multi-reporters": "1.6.3",
     "mocha": "7.0.1",
-    "mocha-junit-reporter": "2.2.1"
+    "mocha-junit-reporter": "2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "scripts": {
+    "reports": "marge -o results/cypress/report -f output.html -t \"Cypress tests\" --charts true --code true results/cypress/output.json",
+    "combine:json": "npx mochawesome-merge ./results/cypress/specs/*.json -o ./results/cypress/output.json",
     "cypress:run": "cypress_org run",
     "cypress:open": "cypress_org open"
   },
