@@ -25,4 +25,13 @@ jobs:
           npm list
       - name: Run Cypress tests
         run: |
+          rm -rf results
           APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }} npx cypress run
+          npm run combine:json
+          npm run reports
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Upload test results
+          path: |
+            results

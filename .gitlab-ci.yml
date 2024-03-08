@@ -19,4 +19,12 @@ cypress_tests:
   script:
     - npm install
     - npm list
+    - rm -rf results
     - npx cypress run
+    - npm run combine:json
+    - npm run reports
+
+job:
+  artifacts:
+    paths:
+      - results
