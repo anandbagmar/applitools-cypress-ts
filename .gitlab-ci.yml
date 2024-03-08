@@ -20,6 +20,7 @@ cypress_tests:
     - rm -rf results
     - npm install
     - npm list
+    - export APPLITOOLS_LOG_DIR=results/applitools-logs
     - npx cypress run
     - ls -l
     - ls -l results
