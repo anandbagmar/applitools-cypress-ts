@@ -1,5 +1,5 @@
 module.exports = {
-    appName: 'TODO-TS',
+    appName: 'Applitools-Cypress-TS',
     // Specify the number of visual checkpoints Applitools will perform in parallel.
     // Warning: If you have a free account, then concurrency will be limited to 1.
     testConcurrency: 5,
