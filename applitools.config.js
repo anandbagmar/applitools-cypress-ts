@@ -17,15 +17,16 @@ module.exports = {
 
     // Select the browsers and devices to run your tests on via the Ultrafast Grid
     browser: [
-        { width: 800, height: 600, name: 'chrome' },
+        { width: 800, height: 600, name: 'firefox' },
         { width: 1600, height: 1200, name: 'firefox' },
         { width: 1024, height: 768, name: 'safari' },
         { deviceName: 'Pixel 2', screenOrientation: 'portrait' },
         { deviceName: 'Nexus 10', screenOrientation: 'landscape' },
+        { deviceName: 'Galaxy S23 Ultra', screenOrientation: 'landscape' },
     ],
 
     // Set the concurrency that tests are rendered with on the UFG
     concurrentSessions: 5,
     dontCloseBatches: true,
-    sendDom: true
+    sendDom: true,
 }
